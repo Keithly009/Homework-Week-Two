@@ -30,6 +30,7 @@ h6
  {
     margin: 0; 
 }
+
 p { 
     margin: 0; 
 }
@@ -42,10 +43,11 @@ header {
     flex-wrap: wrap;
     align-items: center;
     background-color: var(--background-color);
+    box-shadow: 0 5px 35px var(--light);
 }
 
 header h1 { 
-    color: var(--primary-color); 
+    color: var(--primary-color);
     padding: 5px 1% 5px 6%; 
     margin: 0; 
     font-size: 4vw; 
@@ -108,7 +110,7 @@ main {
     background-color: var(--Secondary-color); 
     color: var(--primary-color);
     margin: 0; 
-    padding: 10px 15px; 
+    padding: 5px 10px; 
     font-size: 2.3rem; 
     line-height: 1.2; 
     display: inline; 
