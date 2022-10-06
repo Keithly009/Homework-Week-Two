@@ -3,9 +3,10 @@
 }
 
 :root { 
-    --primary-color: rgba(221, 16, 88, 0.726); 
-    --Secondary-color: rgba(174, 21, 221, 0.786); 
-    --Tertiary-color: rgb(17, 17, 120);
+    --primary-color: rgba(221, 16, 88, 0.934); 
+    --Secondary-color: rgba(75, 7, 211, 0.266); 
+    --background-color: rgba(6, 55, 83, 0.899);
+    --writing-color: rgba(43, 7, 204, 0.859); 
     --dark: black; 
     --light: white; 
 }
@@ -15,7 +16,7 @@ body {
 
     font-size: 1.75rem; 
     line-height: 1.5;
-    color: var(--Tertiary-color); 
+    color: var(--writing-color); 
     background-color: var(--light);
 }
 
@@ -34,7 +35,7 @@ header {
     justify-content: space-between; 
     flex-wrap: wrap;
     align-items: center;
-    background-color: var(--Tertiary-color);
+    background-color: var(--background-color);
 }
 
 header h1 { 
@@ -56,12 +57,134 @@ nav a {
     padding: 5px 10px; 
     color: var(--primary-color); 
     margin-right: 10px;
-    background-image: linear-gradient(270deg, var(--Secondary-color) 0%, var(--Secondary-color) 100% );
+    background-image: linear-gradient(270deg, var(--primary-color) 0%, var(--Secondary-color) 100%);
     background-repeat:no-repeat; 
     background-size: 100% 0.2em;
     background-position: bottom;  
     transition: all 0.25s ease-in; 
     font-size: 1.4rem; 
+}
+
+nav a:hover { 
+    background-size: 100% 100%; 
+    color: var(--Secondary-color)
+}
+
+nav a:last-child {
+    margin-right: 0; 
+}
+
+main { 
+    margin-top: 20px;
+    margin-bottom: 45px; 
+}
+
+.main-banner { 
+    background: rgb(75, 113, 144); 
+    background-image: url("/Pictures/background-color-represents-light-burst-and-bright.jpg"), linear-gradient(180deg, var(--Secondary-color) 0%, var(--primary-color) 100%);
+    background-size: cover; 
+    background-position: center;
+    background-blend-mode: soft-light; 
+    min-height: 30vh; 
+    color: var(--light); 
+    padding: 2% 6%; 
+    display: flex; 
+    justify-content: flex-end;
+    align-items: flex-end; 
+    text-align: center; 
+}
+
+.main-banner div {
+    flex: 0 0 90%; 
+}
+
+.main-banner h2 { 
+    background-color: var(--Secondary-color); 
+    color: var(--primary-color);
+    margin: 0; 
+    padding: 10px 15px; 
+    font-size: 2.3rem; 
+    line-height: 1.2; 
+    display: inline; 
+}
+
+.main-part { 
+    max-width: 88%; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.main-section { 
+    margin: 25px 0; 
+    padding: 10px 0; 
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    align-items: stretch; 
+    justify-content: space-between; 
+}
+
+.main-section > h2 { 
+    flex: 0 0 20%; 
+    text-align: right; 
+    padding-right: 15px; 
+    border-right: 4px solid var(--background-color); 
+    font-size: 4vw;
+    line-height: 1.1; 
+}
+
+.main-section > div { 
+    flex: 0 0 77%; 
+}
+
+.main-section p { 
+    margin-bottom: 20px; 
+}
+
+.flex-container { 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+} 
+
+.flex-item { 
+    border: 5px solid var(--background-color); 
+    background: var(--primary-color);
+    color: var(--Secondary-color); 
+    min-height: 150px; 
+    max-height: 150px;
+    display: flex; 
+    align-items: flex-end;
+    padding: 0 0 20px 0; 
+    margin: 0.5em; 
+    text-decoration: none;
+    background-blend-mode: soft-light;
+    background-size: 150%;
+    transition: all 0.5s; 
+    font-size: 0.9rem; 
+}
+
+.contact address { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    align-items: center; 
+    height: 100% 
+}
+
+.contact address a { 
+    color: var(--primary-color); 
+    padding: 5px; 
+    text-decoration: none;
+    font-size: 1.3rem; 
+    font-style: normal; 
+    background-image: linear-gradient(270 deg, var(--primary-color) 0%, var(--primary-color) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: bottom;
+    transition: all 0.25s ease-in; 
+    margin: 0 0.2rem 0.1rem; 
+    display: inline-block; 
 }
 
 @media screen and (min-width: 768px) {
