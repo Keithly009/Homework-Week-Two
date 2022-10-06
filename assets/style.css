@@ -4,21 +4,41 @@
 
 :root { 
     --primary-color: rgba(221, 16, 88, 0.726); 
-    --Secondary-color: rgba(74, 157, 209, 0.589); 
-    --Tertiary-color: blue;
+    --Secondary-color: rgba(174, 21, 221, 0.786); 
+    --Tertiary-color: rgb(17, 17, 120);
     --dark: black; 
     --light: white; 
 }
 
-::selection { 
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-    background-color: 
-    color: 
+    font-size: 1.75rem; 
+    line-height: 1.5;
+    color: var(--Tertiary-color); 
+    background-color: var(--light);
+}
+
+h1, 
+h2 {
+    margin: 0; 
+}
+p { 
+    margin: 0; 
+}
+
+header { 
+    padding: 15px 6% 15px 0; 
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--Tertiary-color);
 }
 
 header h1 { 
     color: var(--primary-color); 
-    background: var(--Secondary-color);
     padding: 5px 1% 5px 6%; 
     margin: 0; 
     font-size: 4vw; 
@@ -29,4 +49,28 @@ nav {
     display: flex; 
     flex-direction: row; 
     flex-wrap: wrap; 
+}
+
+nav a { 
+    text-decoration: none;
+    padding: 5px 10px; 
+    color: var(--primary-color); 
+    margin-right: 10px;
+    background-image: linear-gradient(270deg, var(--Secondary-color) 0%, var(--Secondary-color) 100% );
+    background-repeat:no-repeat; 
+    background-size: 100% 0.2em;
+    background-position: bottom;  
+    transition: all 0.25s ease-in; 
+    font-size: 1.4rem; 
+}
+
+@media screen and (min-width: 768px) {
+    .flex-item :first-child { 
+        min-height: 150px; 
+    } 
+} 
+@media screen and (max-width: 768px) { 
+    .flex-item, .flex-item::first-child { 
+        flex-basis: 100%;
+    }
 }
