@@ -1,0 +1,32 @@
+*{ 
+    box-sizing: border-box;
+}
+
+:root { 
+    --primary-color: rgba(221, 16, 88, 0.726); 
+    --Secondary-color: rgba(74, 157, 209, 0.589); 
+    --Tertiary-color: blue;
+    --dark: black; 
+    --light: white; 
+}
+
+::selection { 
+
+    background-color: 
+    color: 
+}
+
+header h1 { 
+    color: var(--primary-color); 
+    background: var(--Secondary-color);
+    padding: 5px 1% 5px 6%; 
+    margin: 0; 
+    font-size: 4vw; 
+    line-height: 1; 
+}
+
+nav {
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+}
